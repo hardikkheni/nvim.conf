@@ -213,4 +213,13 @@ require('lazy').setup {
       require 'hardikkheni.config.which-key'
     end,
   },
+
+  -- Terminal package
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    opts = {
+      --[[ things you want to change go here]]
+    },
+  },
 }
