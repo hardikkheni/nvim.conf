@@ -222,4 +222,26 @@ require('lazy').setup {
       --[[ things you want to change go here]]
     },
   },
+
+  -- Bufferline
+  {
+    'akinsho/bufferline.nvim',
+    version = '*',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    opts = {
+      options = {
+        diagnostics = 'nvim_lsp',
+        diagnostics_update_in_insert = true,
+        diagnostics_indicator = function(_, _, diag)
+          if diag.error ~= nil then
+            return '󰅚'
+          end
+          if diag.warning ~= nil then
+            return '󰀪'
+          end
+          return '󰋽'
+        end,
+      },
+    },
+  },
 }
